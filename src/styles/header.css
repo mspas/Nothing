@@ -1,0 +1,19 @@
+.navbar {
+  margin: 0 15% 0 25%;
+  -webkit-animation-delay: 8000ms;
+  -moz-animation-delay: none;
+  animation-delay: 8000ms;
+}
+@media screen and (max-width: 510px) {
+  .navbar {
+    margin: 0;
+    padding: 8px 16px 0 0;
+  }
+}
+.nav-link {
+  text-align: right;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: black;
+}

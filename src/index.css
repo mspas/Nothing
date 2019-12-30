@@ -4,6 +4,12 @@ body {
   font-family: "Gilda Display", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 24px;
+}
+@media screen and (max-width: 575px) {
+  body {
+    font-size: 12px;
+  }
 }
 
 code {

@@ -5,8 +5,8 @@ import "../styles/home.css";
 function Home() {
   return (
     <div className="home-page">
-      <div className="row">
-        <div className="col-md-8 col-sm-8 col-xs-8">
+      <div className="row" id="home-row">
+        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
           <h1 id="line-1" className="animated fadeIn">
             Finally ready to present to you
           </h1>
@@ -20,7 +20,10 @@ function Home() {
             and it is brand new...
           </h1>
         </div>
-        <div className="col-md-4 col-sm-4 col-xs-4" id="right-half">
+        <div
+          className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4"
+          id="right-half"
+        >
           <div id="line-6" className="animated fadeIn rect-round">
             Nothing.
           </div>
