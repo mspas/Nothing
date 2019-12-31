@@ -12,18 +12,7 @@ function App() {
     <div>
       <Header />
       <Home />
-      <section>
-        <Ad />
-      </section>
-      <section>
-        <Quotes />
-      </section>
-      <section>
-        <Prizes />
-      </section>
-      <section>
-        <Contact />
-      </section>
+      <Ad id="about-nothing" waitBeforeShow={8000} />
     </div>
   );
 }

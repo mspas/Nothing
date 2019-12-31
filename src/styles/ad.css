@@ -33,6 +33,8 @@ h1 {
   font-size: 3em;
   letter-spacing: 10px;
   text-align: left;
+}
+#animation-1 {
   -webkit-animation-delay: 500ms;
   -moz-animation-delay: none;
   animation-delay: 500ms;
@@ -40,6 +42,8 @@ h1 {
 #line-mount-2 {
   font-size: 2em;
   text-align: right;
+}
+#animation-2 {
   -webkit-animation-delay: 700ms;
   -moz-animation-delay: none;
   animation-delay: 1500ms;
@@ -47,6 +51,8 @@ h1 {
 #line-mount-3 {
   font-size: 4em;
   text-align: center;
+}
+#animation-3 {
   -webkit-animation-delay: 900ms;
   -moz-animation-delay: none;
   animation-delay: 2500ms;
@@ -54,6 +60,8 @@ h1 {
 #line-mount-4 {
   font-size: 3em;
   text-align: left;
+}
+#animation-4 {
   -webkit-animation-delay: 1100ms;
   -moz-animation-delay: none;
   animation-delay: 5000ms;

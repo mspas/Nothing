@@ -1,26 +1,40 @@
 import React from "react";
+import ScrollAnimation from "react-animate-on-scroll";
 import "../App.css";
 import "../styles/ad.css";
 
-function Ad() {
-  return (
-    <div id="wrap">
-      <div className="row" id="mountains">
-        <h1 id="line-mount-1" className="animated fadeIn">
-          Those mountains
-        </h1>
-        <h1 id="line-mount-2" className="animated fadeIn">
-          says completely
-        </h1>
-        <h1 id="line-mount-3" className="animated fadeIn">
-          Nothing.
-        </h1>
-        <h1 id="line-mount-4" className="animated fadeIn">
-          It's fine.
-        </h1>
+class Ad extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hidden: true };
+  }
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ hidden: false });
+    }, this.props.waitBeforeShow);
+  }
+  render() {
+    return this.state.hidden ? (
+      ""
+    ) : (
+      <div id="wrap">
+        <div className="row" id="mountains">
+          <ScrollAnimation delay={500} animateOnce={true} animateIn="fadeIn">
+            <h1 id="line-mount-1">Those mountains</h1>
+          </ScrollAnimation>
+          <ScrollAnimation delay={1500} animateOnce={true} animateIn="fadeIn">
+            <h1 id="line-mount-2">says completely</h1>
+          </ScrollAnimation>
+          <ScrollAnimation delay={2500} animateOnce={true} animateIn="fadeIn">
+            <h1 id="line-mount-3">Nothing.</h1>
+          </ScrollAnimation>
+          <ScrollAnimation delay={5000} animateOnce={true} animateIn="fadeIn">
+            <h1 id="line-mount-4">It's fine.</h1>
+          </ScrollAnimation>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Ad;
