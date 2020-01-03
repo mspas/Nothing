@@ -1,0 +1,27 @@
+#quotes-wrap {
+  min-height: 700px;
+}
+.media {
+  width: 700px;
+  border-radius: 75px;
+  -webkit-box-shadow: 3px 3px 17px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 17px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 17px -6px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.author {
+  margin: 0;
+  margin-right: 50px;
+  font-size: 18px;
+  text-align: right;
+}
+.author-right {
+  margin-right: 0;
+  margin-left: 50px;
+  text-align: left;
+}
+.quote-ico {
+  margin: 0 10px;
+}
