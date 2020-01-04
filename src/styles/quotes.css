@@ -1,21 +1,50 @@
 #quotes-wrap {
-  min-height: 700px;
+  min-height: 400px;
+  padding: 10vh 0;
+  background-color: rgb(233, 233, 233);
+}
+.heading {
+  text-align: center;
+  letter-spacing: 0.2em;
+}
+#quotes {
+  margin: 10vh 0;
 }
 .media {
   width: 700px;
+  background-color: white;
   border-radius: 75px;
-  -webkit-box-shadow: 3px 3px 17px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px 3px 17px -6px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 3px 17px -6px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  transition: all 100ms ease-in;
+  transform: scale(1);
+}
+.media:hover {
+  box-shadow: 3px 3px 27px 0px rgba(0, 0, 0, 0.75);
+  z-index: 2;
+  transition: all 100ms ease-in;
+  transform: scale(1.1);
+}
+@media screen and (max-width: 700px) {
+  .media {
+    max-width: 90vw;
+  }
+}
+.media-right {
+  box-shadow: -3px 3px 17px -6px rgba(0, 0, 0, 0.75);
 }
 .author {
   margin: 0;
   margin-right: 50px;
   font-size: 18px;
   text-align: right;
+}
+@media screen and (max-width: 414px) {
+  .author {
+    font-size: 1.25em;
+  }
 }
 .author-right {
   margin-right: 0;
