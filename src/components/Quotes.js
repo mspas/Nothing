@@ -2,9 +2,9 @@ import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import "../App.css";
 import "../styles/quotes.css";
-import einstein from "../einstein.png";
-import curie from "../curie.png";
-import lincoln from "../lincoln.png";
+import einstein from "../assets/einstein.png";
+import curie from "../assets/curie.png";
+import lincoln from "../assets/lincoln.png";
 
 function Quotes() {
   return (
@@ -65,7 +65,7 @@ function Quotes() {
         </ul>
       </div>
       <ScrollAnimation delay={1500} animateOnce={true} animateIn="fadeIn">
-        <h2 className="heading">needs a bit of Nothing.</h2>
+        <h1 className="heading">needs a bit of Nothing.</h1>
       </ScrollAnimation>
     </div>
   );

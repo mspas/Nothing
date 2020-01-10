@@ -1,0 +1,72 @@
+#prizes-wrap {
+  min-height: 100vh;
+  /*background-color: rgb(247, 247, 247);*/
+  background-image: radial-gradient(
+    circle at bottom,
+    rgb(247, 247, 247) 0,
+    rgb(233, 233, 233) 70%
+  );
+}
+.opt {
+  width: 300px;
+  height: 500px;
+  padding: 20px 0 0 0;
+  text-align: center;
+  background-color: rgba(223, 223, 223, 0);
+  border-radius: 2px;
+  border-color: rgba(0, 0, 0, 0.336);
+  border-width: 1px;
+  border-style: ridge;
+  transform: scale(1);
+  transition: 150ms linear all;
+}
+.opt:hover {
+  transform: scale(1.04);
+  z-index: 11;
+  background-color: transparent;
+  background-image: linear-gradient(
+    to top,
+    rgb(247, 247, 247) 0%,
+    rgb(223, 223, 223) 100%
+  );
+  border-color: rgba(0, 0, 0, 0.5);
+}
+ul {
+  margin-top: 50px;
+  padding: 0;
+  font-size: 18px;
+  color: rgb(0, 0, 0, 0.7);
+  list-style-type: none;
+}
+.opt-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding-bottom: 50px;
+}
+.button {
+  background-color: #a8a8a873;
+  padding: 10px 0;
+  width: 120px;
+  border-style: none;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 4px;
+}
+.button:hover {
+  background-color: transparent;
+  background-image: linear-gradient(
+    to left,
+    rgba(238, 121, 54, 0.486) 0%,
+    rgba(235, 73, 92, 0.473) 100%
+  );
+}
+.button-hover {
+  background-color: transparent;
+  background-image: linear-gradient(
+    to left,
+    rgba(238, 122, 54, 1) 0%,
+    rgba(235, 73, 93, 1) 100%
+  );
+}

@@ -1,0 +1,25 @@
+#about-wrap {
+  min-height: 100vh;
+  padding: 10vh 50px;
+  background-color: rgba(0, 0, 0, 0.021);
+}
+#pros {
+  border-radius: 100px;
+}
+.spin {
+  display: inline-block;
+  margin: 0 10px;
+  animation: spin 2s linear infinite;
+  animation-delay: 10000ms;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateX(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg);
+    transform: rotateY(360deg);
+  }
+}

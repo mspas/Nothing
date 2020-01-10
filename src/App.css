@@ -11,3 +11,8 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+.heading {
+  text-align: center;
+  letter-spacing: 0.2em;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Ad from "./Ad";
 import Quotes from "./Quotes";
+import About from "./About";
 import Prizes from "./Prizes";
 import Contact from "./Contact";
 
@@ -19,8 +20,10 @@ class Content extends React.Component {
       ""
     ) : (
       <div>
-        <Ad id="about-nothing" />
-        <Quotes id="quotes" />
+        <Ad />
+        <About id="about" />
+        <Quotes />
+        <Prizes id="buy" />
       </div>
     );
   }

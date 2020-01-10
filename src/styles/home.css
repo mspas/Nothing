@@ -7,7 +7,7 @@
 
 .home-page {
   min-height: 100vh;
-  min-width: 100vw;
+  max-width: 99vw;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -62,6 +62,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 300ms linear all;
 }
 #com {
   position: absolute;
@@ -109,6 +110,7 @@ h1 {
   animation-delay: 8000ms;
 }
 #line-6 {
+  user-select: none;
   padding: 0 20px;
   animation-delay: 8000ms;
 }
