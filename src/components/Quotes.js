@@ -64,7 +64,7 @@ function Quotes() {
           </ScrollAnimation>
         </ul>
       </div>
-      <ScrollAnimation delay={1500} animateOnce={true} animateIn="fadeIn">
+      <ScrollAnimation delay={500} animateOnce={true} animateIn="fadeIn">
         <h1 className="heading">needs a bit of Nothing.</h1>
       </ScrollAnimation>
     </div>

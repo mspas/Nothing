@@ -28,7 +28,7 @@ class Ad extends React.Component {
           <ScrollAnimation delay={2500} animateOnce={true} animateIn="fadeIn">
             <h1 id="line-mount-3">Nothing.</h1>
           </ScrollAnimation>
-          <ScrollAnimation delay={5000} animateOnce={true} animateIn="fadeIn">
+          <ScrollAnimation delay={3500} animateOnce={true} animateIn="fadeIn">
             <h1 id="line-mount-4">It's fine.</h1>
           </ScrollAnimation>
         </div>

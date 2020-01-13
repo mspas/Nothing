@@ -5,10 +5,11 @@ import Home from "./components/Home";
 import Content from "./components/Content";
 function App() {
   return (
-    <div>
+    <div style={{ width: "100vw" }}>
+      <div className="sr-only" id="alert"></div>
       <Header />
-      <Home />
-      <Content waitBeforeShow={100} />
+      <Home id="home" />
+      <Content waitBeforeShow={8000} />
     </div>
   );
 }

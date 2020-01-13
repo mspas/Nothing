@@ -1,4 +1,5 @@
 import React from "react";
+import { Element } from "react-scroll";
 import "../App.css";
 import "../styles/home.css";
 
@@ -14,14 +15,12 @@ class Mouse {
     this.center_y = 0;
   }
 
-  setCardPos(x, y) {
+  setCardPos(x, y, scrollY) {
     this.elem_pos_x = x;
-    this.elem_pos_y = y;
+    this.elem_pos_y = y - scrollY;
   }
 
   updatePosition(clientX, clientY) {
-    //this.x = clientX - this._x;
-    //this.y = (clientY - this._y) * -1;
     this.delta_x = (clientX - this.center_x) * 0.15;
     this.delta_y = (clientY - this.center_y) * -0.15;
   }
@@ -39,7 +38,7 @@ const updateRate = 10;
 class Home extends React.Component {
   constructor(props) {
     super(props);
-    this.counter = 0;
+    this.state = { scrollY: 0, counter: 0 };
   }
 
   getPos(el) {
@@ -58,7 +57,11 @@ class Home extends React.Component {
       var offsetHeight;
       var pos = this.getPos(document.getElementById("right-half"));
 
-      mouse.setCardPos(pos.x, pos.y);
+      window.onscroll = e => {
+        this.setScrollY(window.scrollY, pos);
+      };
+
+      mouse.setCardPos(pos.x, pos.y, this.state.scrollY);
 
       c.addEventListener("mouseover", event => {
         offsetHeight = c.offsetHeight;
@@ -76,11 +79,26 @@ class Home extends React.Component {
       c.addEventListener("mouseleave", () => {
         c.removeAttribute("style");
       });
-    }, 8000);
+    }, 100);
+  }
+
+  setScrollY(value, pos) {
+    this.setState(
+      {
+        scrollY: `${value}`
+      },
+      () => {
+        mouse.setCardPos(pos.x, pos.y, this.state.scrollY);
+      }
+    );
   }
 
   isTimeToUpdate() {
-    return this.counter++ % updateRate === 0;
+    let i = Number(this.state.counter) + 1;
+    this.setState({
+      counter: `${i}`
+    });
+    return i % updateRate === 0;
   }
   update(clientX, clientY) {
     mouse.updatePosition(clientX, clientY);
@@ -104,31 +122,33 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <div className="row" id="home-row">
-          <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
-            <h1 id="line-1" className="animated fadeIn">
-              Finally ready to present to you
-            </h1>
-            <h1 id="line-2" className="animated fadeIn">
-              an unique product
-            </h1>
-            <h1 id="line-3" className="animated fadeIn">
-              which always was with you and will be
-            </h1>
-            <h1 id="line-4" className="animated fadeIn">
-              and it is brand new...
-            </h1>
-          </div>
-          <div
-            className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4"
-            id="right-half"
-          >
-            <div id="line-6" className="animated fadeIn czesc">
-              Nothing.
-              <p id="com">Nothing to hover</p>
+        <Element id="home" name="home">
+          <div className="row" id="home-row">
+            <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
+              <h1 id="line-1" className="animated fadeIn">
+                Finally ready to present to you
+              </h1>
+              <h1 id="line-2" className="animated fadeIn">
+                an unique product
+              </h1>
+              <h1 id="line-3" className="animated fadeIn">
+                which is inevitable part of existence
+              </h1>
+              <h1 id="line-4" className="animated fadeIn">
+                and it is our new...
+              </h1>
+            </div>
+            <div
+              className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4"
+              id="right-half"
+            >
+              <div id="line-6" className="animated fadeIn rect-move">
+                Nothing.
+                <p id="com">Nothing to hover</p>
+              </div>
             </div>
           </div>
-        </div>
+        </Element>
       </div>
     );
   }

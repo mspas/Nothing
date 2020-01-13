@@ -3,7 +3,6 @@ import Ad from "./Ad";
 import Quotes from "./Quotes";
 import About from "./About";
 import Prizes from "./Prizes";
-import Contact from "./Contact";
 
 class Content extends React.Component {
   constructor(props) {
@@ -21,9 +20,14 @@ class Content extends React.Component {
     ) : (
       <div>
         <Ad />
-        <About id="about" />
+        <About />
         <Quotes />
-        <Prizes id="buy" />
+        <Prizes />
+        <footer>
+          ~ Marcin Spasiński
+          <br />
+          2019
+        </footer>
       </div>
     );
   }
