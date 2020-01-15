@@ -1,5 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
+import ScrollAnimation from "react-animate-on-scroll";
 import "../App.css";
 import "../styles/home.css";
 
@@ -52,7 +53,7 @@ class Home extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      var c = document.getElementById("line-6");
+      var c = document.getElementById("nothing-card");
       var offsetWidth;
       var offsetHeight;
       var pos = this.getPos(document.getElementById("right-half"));
@@ -60,6 +61,10 @@ class Home extends React.Component {
       window.onscroll = e => {
         this.setScrollY(window.scrollY, pos);
       };
+
+      if (window.innerWidth < 376) {
+        c.setAttribute("class", "animated fadeIn rect-move spinning");
+      }
 
       mouse.setCardPos(pos.x, pos.y, this.state.scrollY);
 
@@ -79,7 +84,7 @@ class Home extends React.Component {
       c.addEventListener("mouseleave", () => {
         c.removeAttribute("style");
       });
-    }, 100);
+    }, 8000);
   }
 
   setScrollY(value, pos) {
@@ -110,7 +115,7 @@ class Home extends React.Component {
   updateTransformStyle(x, y) {
     x = Number(x).toString();
     y = Number(y).toString();
-    var element = document.getElementById("line-6");
+    var element = document.getElementById("nothing-card");
     var style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
     element.style.transform = style;
     element.style.webkitTransform = style;
@@ -142,10 +147,16 @@ class Home extends React.Component {
               className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-4"
               id="right-half"
             >
-              <div id="line-6" className="animated fadeIn rect-move">
-                Nothing.
-                <p id="com">Nothing to hover</p>
-              </div>
+              <ScrollAnimation
+                delay={8000}
+                animateOnce={true}
+                animateIn="fadeIn"
+              >
+                <div id="nothing-card" className="animated fadeIn rect-move">
+                  Nothing.
+                  <p id="com">Nothing to hover</p>
+                </div>
+              </ScrollAnimation>
             </div>
           </div>
         </Element>

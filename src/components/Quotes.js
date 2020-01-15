@@ -9,9 +9,7 @@ import lincoln from "../assets/lincoln.png";
 function Quotes() {
   return (
     <div id="quotes-wrap">
-      <ScrollAnimation delay={500} animateOnce={true} animateIn="fadeIn">
-        <h1 className="heading">Sometimes everyone...</h1>
-      </ScrollAnimation>
+      <h1 className="heading">Sometimes everyone...</h1>
       <div className="center" id="quotes">
         <ul className="list-unstyled">
           <ScrollAnimation animateOnce={true} animateIn="fadeInLeft">
@@ -64,9 +62,7 @@ function Quotes() {
           </ScrollAnimation>
         </ul>
       </div>
-      <ScrollAnimation delay={500} animateOnce={true} animateIn="fadeIn">
-        <h1 className="heading">needs a bit of Nothing.</h1>
-      </ScrollAnimation>
+      <h1 className="heading">needs a bit of Nothing.</h1>
     </div>
   );
 }

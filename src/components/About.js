@@ -9,40 +9,34 @@ function About() {
   return (
     <div id="about-wrap">
       <Element id="about" name="about">
-        <ScrollAnimation delay={100} animateOnce={true} animateIn="fadeIn">
-          <h1 className="heading" id="about-heading">
-            What is Nothing?
-          </h1>
-        </ScrollAnimation>
-        <div className="row">
-          <div
-            className="col-lg-6 col-md-6 col-sm-6 col-xs-6"
-            style={{ textAlign: "justify" }}
-          >
-            <ScrollAnimation delay={500} animateOnce={true} animateIn="fadeIn">
-              Insert here some
-              <span className="spin">funny joke </span>
-              about Nothing being a thing. Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit. Maecenas tincidunt enim vehicula
-              lectus scelerisque, vitae rhoncus quam lobortis. Pellentesque quis
-              congue augue. Aenean facilisis sit amet tortor eu tempor. In
-              laoreet non diam vel tincidunt. Curabitur aliquam efficitur
-              pretium. Vivamus ut justo erat.
-            </ScrollAnimation>
-            <br />
-            <ScrollAnimation delay={1500} animateOnce={true} animateIn="fadeIn">
-              Remember to add picture of random people looking really
-              profesionall.
-            </ScrollAnimation>
+        <div id="rect"></div>
+        <ScrollAnimation animateOnce={true} animateIn="fadeInRight">
+          <div className="row" id="row1">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+              <h1 id="about-header">What is Nothing?</h1>
+            </div>
+            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 center text">
+              Insert here some funny joke about Nothing being a thing. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+              tincidunt enim vehicula lectus scelerisque, vitae rhoncus quam
+              lobortis pellentesque.
+            </div>
           </div>
-          <div className="col-lg-6 col-md-6 col-sm-6 col-xs-6 center">
-            <ScrollAnimation delay={1500} animateOnce={true} animateIn="fadeIn">
+        </ScrollAnimation>
+        <ScrollAnimation animateOnce={true} animateIn="fadeInLeft">
+          <div className="row" id="row2">
+            <div className="col-lg-8 col-md-8 col-sm-8 col-xs-8 center padding0">
               <div className="pros-wrap center">
                 <img id="pros" src={pros} alt="Pro people" />
               </div>
-            </ScrollAnimation>
+            </div>
+            <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-sm">
+              Remember to add picture of random people looking really
+              profesionall.
+            </div>
           </div>
-        </div>
+          <p id="btn-show">Show nothing</p>
+        </ScrollAnimation>
       </Element>
     </div>
   );

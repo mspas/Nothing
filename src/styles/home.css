@@ -113,26 +113,32 @@ h1 {
   text-align: center;
   animation-delay: 8000ms;
 }
-#line-6 {
+#nothing-card {
   user-select: none;
   padding: 0 20px;
-  animation-delay: 8000ms;
-}
-.svg-delay {
-  animation-delay: 8000ms;
 }
 
-#circle {
-  animation: wheel 2s infinite linear;
+.spinning {
+  animation: spin 4s infinite linear, appear 2s linear;
   transform-origin: center;
   transform-box: fill-box;
 }
 
-@keyframes wheel {
+@keyframes spin {
   from {
-    transform: rotateZ(0deg);
+    transform: rotateX(0deg);
+    transform: rotateY(0deg);
   }
   to {
-    transform: rotateZ(360deg);
+    transform: rotateX(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
