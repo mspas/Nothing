@@ -32,7 +32,7 @@ function About() {
             </div>
             <div className="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-sm">
               Remember to add picture of random people looking really
-              profesionall.
+              professional.
             </div>
           </div>
           <p id="btn-show">Show nothing</p>

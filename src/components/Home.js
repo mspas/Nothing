@@ -131,7 +131,7 @@ class Home extends React.Component {
           <div className="row" id="home-row">
             <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-8">
               <h1 id="line-1" className="animated fadeIn">
-                Finally ready to present to you
+                Finally ready to present you
               </h1>
               <h1 id="line-2" className="animated fadeIn">
                 an unique product

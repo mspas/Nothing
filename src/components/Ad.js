@@ -20,10 +20,10 @@ class Ad extends React.Component {
       <div id="wrap">
         <div className="row" id="mountains">
           <ScrollAnimation delay={500} animateOnce={true} animateIn="fadeIn">
-            <h1 id="line-mount-1">Those mountains</h1>
+            <h1 id="line-mount-1">These mountains</h1>
           </ScrollAnimation>
           <ScrollAnimation delay={1500} animateOnce={true} animateIn="fadeIn">
-            <h1 id="line-mount-2">says completely</h1>
+            <h1 id="line-mount-2">say completely</h1>
           </ScrollAnimation>
           <ScrollAnimation delay={2500} animateOnce={true} animateIn="fadeIn">
             <h1 id="line-mount-3">Nothing.</h1>
