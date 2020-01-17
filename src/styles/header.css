@@ -5,7 +5,7 @@
     rgba(255, 0, 0, 0),
     rgb(255, 255, 255)
   );
-  animation-delay: 100ms;
+  animation-delay: 8000ms;
 }
 .navbar-dark {
   background-image: linear-gradient(

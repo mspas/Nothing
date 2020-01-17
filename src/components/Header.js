@@ -17,7 +17,6 @@ class Header extends React.Component {
 
   componentDidMount() {
     setTimeout(() => {
-      console.log("jusz");
       this.setState(
         {
           did_mount: true
