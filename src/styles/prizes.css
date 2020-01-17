@@ -1,9 +1,19 @@
 #prizes-wrap {
   min-height: 100vh;
+  padding-bottom: 20px;
+}
+.prizes-bright {
   background-image: radial-gradient(
     circle at top,
     rgb(255, 255, 255) 0,
     rgb(211, 211, 211) 100%
+  );
+}
+.prizes-dark {
+  background-image: radial-gradient(
+    circle at top right,
+    rgba(82, 82, 82, 0.397) 0,
+    rgb(26, 26, 26) 50%
   );
 }
 @media screen and (max-width: 900px) {
@@ -25,9 +35,7 @@
   height: 500px;
   padding: 20px 0 0 0;
   text-align: center;
-  background-color: rgba(223, 223, 223, 0);
   border-radius: 2px;
-  border-color: rgba(0, 0, 0, 0.336);
   border-width: 1px;
   border-style: ridge;
   transform: scale(1);
@@ -36,21 +44,41 @@
 .opt:hover {
   transform: scale(1.04);
   z-index: 11;
+}
+.opt-bright {
+  background-color: rgba(223, 223, 223, 0);
+  border-color: rgba(0, 0, 0, 0.336);
+}
+.opt-bright:hover {
   background-color: transparent;
   background-image: linear-gradient(
     to top,
     rgb(247, 247, 247) 0%,
     rgb(223, 223, 223) 100%
   );
-  border-color: rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px 17px -6px black;
 }
+.opt-dark {
+  background-color: rgba(223, 223, 223, 0);
+  border-color: rgb(255, 255, 255);
+}
+.opt-dark:hover {
+  background-color: transparent;
+  background-image: linear-gradient(
+    to top,
+    rgb(37, 37, 37) 0%,
+    rgb(22, 22, 22) 100%
+  );
+  box-shadow: 3px 3px 17px -6px white;
+}
 ul {
-  margin-top: 50px;
-  padding: 0;
-  font-size: 18px;
-  color: rgb(0, 0, 0, 0.7);
   list-style-type: none;
+  padding: 0;
+  margin-top: 50px;
+  font-size: 18px;
+}
+ul .features {
+  opacity: 0.7;
 }
 .opt-footer {
   position: absolute;
@@ -72,8 +100,8 @@ ul {
   background-color: transparent;
   background-image: linear-gradient(
     to left,
-    rgba(54, 238, 152, 0.486) 0%,
-    rgba(73, 143, 235, 0.473) 100%
+    rgba(54, 238, 152, 0.651) 0%,
+    rgba(73, 143, 235, 0.678) 100%
   );
 }
 .button:active,

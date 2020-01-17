@@ -18,7 +18,7 @@ class Ad extends React.Component {
       ""
     ) : (
       <div id="wrap">
-        <div className="row" id="mountains">
+        <div className="row mount-bg" id="mountains">
           <ScrollAnimation delay={500} animateOnce={true} animateIn="fadeIn">
             <h1 id="line-mount-1">These mountains</h1>
           </ScrollAnimation>

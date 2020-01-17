@@ -63,7 +63,7 @@ class Home extends React.Component {
       };
 
       if (window.innerWidth < 376) {
-        c.setAttribute("class", "animated fadeIn rect-move spinning");
+        c.setAttribute("class", "animated rect-move spinning");
       }
 
       mouse.setCardPos(pos.x, pos.y, this.state.scrollY);

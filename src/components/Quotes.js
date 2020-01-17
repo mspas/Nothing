@@ -8,7 +8,7 @@ import lincoln from "../assets/lincoln.png";
 
 function Quotes() {
   return (
-    <div id="quotes-wrap">
+    <div id="quotes-wrap" className="quotes-bright">
       <h1 className="heading">Sometimes everyone...</h1>
       <div className="center" id="quotes">
         <ul className="list-unstyled">

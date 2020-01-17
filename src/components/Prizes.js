@@ -42,11 +42,11 @@ class Prizes extends React.Component {
     ) : (
       <div>
         <Element id="buy" name="buy">
-          <div className="center" id="prizes-wrap">
-            <div className="opt">
+          <div className="center prizes-bright" id="prizes-wrap">
+            <div className="opt opt-bright">
               <h2 style={{ marginBottom: 50 }}>Basic Nothing.</h2>
               <h3>$29.99</h3>
-              <ul>
+              <ul className="features">
                 <li>Nothing.</li>
                 <li>Without shipment of Nothing.</li>
               </ul>
@@ -61,10 +61,10 @@ class Prizes extends React.Component {
                 </button>
               </div>
             </div>
-            <div className="opt">
+            <div className="opt opt-bright">
               <h2 style={{ marginBottom: 50 }}>Nothing+.</h2>
               <h3>$39.99</h3>
-              <ul>
+              <ul className="features">
                 <li>Nothing but more expensive and worse quality</li>
                 <li>How do you want ship Nothing?</li>
               </ul>
@@ -79,10 +79,10 @@ class Prizes extends React.Component {
                 </button>
               </div>
             </div>
-            <div className="opt">
+            <div className="opt opt-bright">
               <h2 style={{ marginBottom: 50 }}>Premium Nothing.</h2>
               <h3>$59.99</h3>
-              <ul>
+              <ul className="features">
                 <li>Literally Nothing.</li>
                 <li>
                   It won't have a Supreme logo so it's like premium Nothing.

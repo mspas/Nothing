@@ -132,5 +132,5 @@
   user-select: none;
 }
 #btn-show:hover {
-  color: rgba(0, 0, 0, 0.527);
+  opacity: 0.6;
 }
